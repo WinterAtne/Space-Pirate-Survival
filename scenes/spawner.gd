@@ -14,7 +14,7 @@ func _ready():
 	spawn_distance = min_distance + spawn_distance_offset
 	
 
-func _on_timer_timeout():
+func _on_timer_timeout() -> void:
 	var instanced_ship = ship.instantiate()
 	get_parent().add_child(instanced_ship)
 	
@@ -27,5 +27,4 @@ func _on_timer_timeout():
 	var this_speed : float = randf_range(speed.x, speed.y)
 	
 	instanced_ship.apply_central_force(instanced_ship.position.direction_to(target) * this_speed)
-	
 	

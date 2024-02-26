@@ -11,7 +11,7 @@ func remove_gravity_object(rb : RigidBody2D) -> void:
 	gravity_objects.erase(rb)
 	
 
-func _physics_process(delta):
+func _physics_process(delta) -> void:
 	for target in gravity_objects:
 		for attractor in gravity_objects:
 			if target == attractor:

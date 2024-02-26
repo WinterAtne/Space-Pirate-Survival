@@ -1,6 +1,6 @@
 extends Node
 
-func _ready():
+func _ready() -> void:
 	if not get_parent() is RigidBody2D:
 		push_warning("Gravity Object asigned non Rigidbody parent " + str(RID(self)))
 		return
