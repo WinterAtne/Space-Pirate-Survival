@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://j7vqb66401co"]
+
+[ext_resource type="PackedScene" uid="uid://bvuiqs22t8vbo" path="res://scenes/gravity_object.tscn" id="1_fboxx"]
+[ext_resource type="Texture2D" uid="uid://bew35rdqjt7po" path="res://assets/ship.png" id="2_0tuav"]
+
+[sub_resource type="GDScript" id="GDScript_0tskc"]
+script/source = "extends RigidBody2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready():
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
+	pass
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y4a83"]
+radius = 4.12311
+
+[node name="Ship" type="RigidBody2D"]
+script = SubResource("GDScript_0tskc")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_0tuav")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_y4a83")
+
+[node name="GravityObject" parent="." instance=ExtResource("1_fboxx")]
