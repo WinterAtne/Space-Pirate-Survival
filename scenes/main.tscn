@@ -1,3 +1,10 @@
-[gd_scene format=3 uid="uid://coer8fit0pos3"]
+[gd_scene load_steps=2 format=3 uid="uid://coer8fit0pos3"]
+
+[ext_resource type="PackedScene" uid="uid://c2luwm5bufp88" path="res://scenes/star.tscn" id="1_rj3vq"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Camera" type="Camera2D" parent="."]
+
+[node name="Star" parent="." instance=ExtResource("1_rj3vq")]
+unique_name_in_owner = true
