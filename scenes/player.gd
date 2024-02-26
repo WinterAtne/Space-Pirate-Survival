@@ -12,3 +12,7 @@ func _physics_process(delta):
 		
 		
 	
+
+func damage() -> void:
+	queue_free()
+	

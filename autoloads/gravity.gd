@@ -7,6 +7,10 @@ func add_gravity_object(rb : RigidBody2D) -> void:
 	gravity_objects.append(rb)
 	
 
+func remove_gravity_object(rb : RigidBody2D) -> void:
+	gravity_objects.erase(rb)
+	
+
 func _physics_process(delta):
 	for target in gravity_objects:
 		for attractor in gravity_objects:

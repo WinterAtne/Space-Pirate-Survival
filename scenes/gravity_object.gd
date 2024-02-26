@@ -6,4 +6,8 @@ func _ready():
 		return
 	
 	Gravity.add_gravity_object(get_parent())
-	queue_free()
+	
+
+func _exit_tree() -> void:
+	Gravity.remove_gravity_object(get_parent())
+	

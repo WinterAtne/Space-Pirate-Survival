@@ -8,6 +8,7 @@
 size = Vector2(6, 6)
 
 [node name="Player" type="RigidBody2D"]
+collision_mask = 0
 script = ExtResource("1_cugs0")
 
 [node name="Sprite" type="Sprite2D" parent="."]
