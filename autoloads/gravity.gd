@@ -1,6 +1,6 @@
 extends Node
 
-const gravity : float = 10.0
+const gravity : float = 125.0
 var gravity_objects : Array[RigidBody2D] = []
 
 func add_gravity_object(rb : RigidBody2D) -> void:
