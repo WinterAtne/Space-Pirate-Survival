@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://pc4t7461wbx8"]
+
+[ext_resource type="PackedScene" uid="uid://j7vqb66401co" path="res://scenes/ship.tscn" id="1_8exsb"]
+[ext_resource type="Texture2D" uid="uid://byqr2iitrsnxy" path="res://assets/torpedo.png" id="2_6hlv3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ryj34"]
+size = Vector2(2, 2)
+
+[node name="Torpedo" instance=ExtResource("1_8exsb")]
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource("2_6hlv3")
+
+[node name="CollisionShape2D" parent="." index="1"]
+shape = SubResource("RectangleShape2D_ryj34")
+
+[editable path="Hurtbox"]
