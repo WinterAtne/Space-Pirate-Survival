@@ -21,7 +21,7 @@ func _physics_process(delta) -> void:
 func fire_torpedo(facing : Vector2) -> void:
 	var instanced_torpedo = torpedo.instantiate()
 	get_parent().add_child(instanced_torpedo)
-	instanced_torpedo.position = facing * 16 + global_position;
+	instanced_torpedo.position = facing * 10 + global_position;
 	
 	instanced_torpedo.apply_central_force(facing * torpedo_speed)
 	

@@ -11,6 +11,8 @@ var spawn_distance : float
 @export var min_wait_time : float = 1.2
 @export var wait_time_step : float = 0.1
 
+@export var player : Node2D
+
 func _ready():
 	var min_distance = (play_area.x if play_area.x > play_area.y else play_area.y)
 	
@@ -24,8 +26,7 @@ func _on_timer_timeout() -> void:
 	var position_direction := Vector2(randf_range(-1.0,1.0), randf_range(-1.0,1.0)).normalized()
 	instanced_ship.position = position_direction * spawn_distance;
 	
-	var target := Vector2(randf_range(-play_area.x,play_area.x), 
-		randf_range(-play_area.y,play_area.y))
+	var target := Vector2(-player.position.x, -player.position.y)
 	
 	var this_speed : float = randf_range(speed.x, speed.y)
 	

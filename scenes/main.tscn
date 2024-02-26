@@ -13,4 +13,7 @@ position = Vector2(82, 22)
 
 [node name="Star" parent="." instance=ExtResource("2_btfus")]
 
-[node name="Spawner" parent="." instance=ExtResource("3_4rcmd")]
+[node name="Spawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_4rcmd")]
+player = NodePath("../Player")
+
+[node name="WorldBound" type="Node2D" parent="."]
