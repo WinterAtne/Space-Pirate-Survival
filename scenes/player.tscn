@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://cq3dypgj7lmc3"]
+
+[ext_resource type="Script" path="res://scenes/player.gd" id="1_cugs0"]
+[ext_resource type="PackedScene" uid="uid://bvuiqs22t8vbo" path="res://scenes/gravity_object.tscn" id="1_padlu"]
+[ext_resource type="Texture2D" uid="uid://c8wnsxmuynco4" path="res://assets/player_ship.png" id="2_bxrph"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k2fau"]
+size = Vector2(6, 6)
+
+[node name="Player" type="RigidBody2D"]
+script = ExtResource("1_cugs0")
+
+[node name="Sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_bxrph")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_k2fau")
+
+[node name="GravityObject" parent="." instance=ExtResource("1_padlu")]
