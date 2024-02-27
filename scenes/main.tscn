@@ -1,19 +1,3 @@
-[gd_scene load_steps=4 format=3 uid="uid://coer8fit0pos3"]
-
-[ext_resource type="PackedScene" uid="uid://cq3dypgj7lmc3" path="res://scenes/player.tscn" id="2_3g7q4"]
-[ext_resource type="PackedScene" uid="uid://c2luwm5bufp88" path="res://scenes/star.tscn" id="2_btfus"]
-[ext_resource type="PackedScene" uid="uid://cbpsk81alsgdf" path="res://scenes/spawner.tscn" id="3_4rcmd"]
+[gd_scene format=3 uid="uid://coer8fit0pos3"]
 
 [node name="Main" type="Node2D"]
-
-[node name="Camera" type="Camera2D" parent="."]
-
-[node name="Player" parent="." instance=ExtResource("2_3g7q4")]
-position = Vector2(82, 22)
-
-[node name="Star" parent="." instance=ExtResource("2_btfus")]
-
-[node name="Spawner" parent="." node_paths=PackedStringArray("player") instance=ExtResource("3_4rcmd")]
-player = NodePath("../Player")
-
-[node name="WorldBound" type="Node2D" parent="."]
