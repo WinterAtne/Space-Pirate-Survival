@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cktmaajhi3dpl"]
+
+[ext_resource type="Script" path="res://scenes/bounds.gd" id="1_7ve2g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ois1g"]
+
+[node name="Bounds" type="Area2D"]
+script = ExtResource("1_7ve2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(15, 15)
+shape = SubResource("RectangleShape2D_ois1g")
+
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
