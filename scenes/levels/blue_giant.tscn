@@ -9,6 +9,7 @@
 [node name="Player" parent="." index="1"]
 position = Vector2(64, 64)
 
-[node name="Spawner" parent="." index="2" instance=ExtResource("4_po5be")]
+[node name="Spawner" parent="." index="2" node_paths=PackedStringArray("player") instance=ExtResource("4_po5be")]
+player = NodePath("../Player")
 
 [node name="Star" parent="." index="3" instance=ExtResource("3_rj3nd")]
