@@ -6,6 +6,10 @@ var current_level_index : int = 0
 var current_level : Level
 
 func start_level() -> void:
+	if levels.size() - 1 < current_level_index:
+		push_error("Level index " + str(current_level_index) + " does not exist")
+		return
+	
 	%MainMenu.visible = false
 	%DeathScreen.visible = false
 	%Background.set_process(false)
@@ -46,6 +50,10 @@ func restart_level() -> void:
 
 func start_next_level() -> void:
 	current_level_index += 1
+	if levels.size() - 1 < current_level_index:
+		current_level_index = 0
+		
+	
 	start_level()
 	
 
