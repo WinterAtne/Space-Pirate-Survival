@@ -5,6 +5,8 @@ const torpedo_speed : float = 10000
 
 @export var torpedo : PackedScene
 
+signal player_died
+
 func _physics_process(delta) -> void:
 	var mouse_position : Vector2 = get_viewport().get_mouse_position()
 	mouse_position = mouse_position - ((get_viewport().get_visible_rect().size / 2))
@@ -27,5 +29,6 @@ func fire_torpedo(facing : Vector2) -> void:
 	
 
 func damage() -> void:
+	player_died.emit()
 	queue_free()
 	
