@@ -17,6 +17,7 @@ config/features=PackedStringArray("4.2", "GL Compatibility")
 [autoload]
 
 Gravity="*res://autoloads/gravity.gd"
+LevelLists="*res://autoloads/level_lists.gd"
 
 [display]
 

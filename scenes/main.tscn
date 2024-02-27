@@ -1,16 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://coer8fit0pos3"]
+[gd_scene load_steps=6 format=3 uid="uid://coer8fit0pos3"]
 
 [ext_resource type="PackedScene" uid="uid://jer0xh2pay0i" path="res://scenes/ui/main_menu.tscn" id="1_gqstx"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_il5e1"]
-[ext_resource type="PackedScene" uid="uid://clbxsx0eefxuj" path="res://scenes/levels/blue_giant.tscn" id="2_nxx7f"]
 [ext_resource type="PackedScene" uid="uid://bplfgyksvl84s" path="res://scenes/background.tscn" id="3_ds0d2"]
-[ext_resource type="PackedScene" uid="uid://cxgkaup60ssxh" path="res://scenes/levels/red_giant.tscn" id="3_wmbnr"]
 [ext_resource type="PackedScene" uid="uid://cr7jp1ykk0e7o" path="res://scenes/ui/death_screen.tscn" id="5_ba5vf"]
 [ext_resource type="PackedScene" uid="uid://b88ekci6n5oao" path="res://scenes/ui/level_select.tscn" id="6_pburi"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_il5e1")
-levels = Array[PackedScene]([ExtResource("2_nxx7f"), ExtResource("3_wmbnr")])
 
 [node name="MainMenu" parent="." instance=ExtResource("1_gqstx")]
 unique_name_in_owner = true

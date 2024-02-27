@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Level_Data" load_steps=4 format=3 uid="uid://gy3rjuwt2ys4"]
+
+[ext_resource type="Texture2D" uid="uid://c530cjfafculj" path="res://assets/blue_star.png" id="1_dprjx"]
+[ext_resource type="Script" path="res://assets/resources/level_data.gd" id="1_ofe2d"]
+[ext_resource type="PackedScene" uid="uid://clbxsx0eefxuj" path="res://scenes/levels/blue_giant.tscn" id="2_f8aax"]
+
+[resource]
+script = ExtResource("1_ofe2d")
+name = "Blue Giant"
+description = "A solitary blue giant star"
+scene = ExtResource("2_f8aax")
+icon = ExtResource("1_dprjx")
