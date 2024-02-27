@@ -29,7 +29,7 @@ layout_mode = 2
 [node name="Systems" type="Label" parent="Titlecard/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
-text = "A Lot of Systems"
+text = "So Many Systems"
 horizontal_alignment = 1
 
 [node name="ToChooseFrom" type="Label" parent="Titlecard/VBoxContainer"]
