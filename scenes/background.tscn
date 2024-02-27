@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bplfgyksvl84s"]
+
+[ext_resource type="Script" path="res://scenes/ui/Background.gd" id="1_6p2mj"]
+[ext_resource type="Texture2D" uid="uid://bu7c2748rpsn7" path="res://assets/stary_background.png" id="2_6f5ne"]
+
+[node name="Background" type="ParallaxBackground"]
+script = ExtResource("1_6p2mj")
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="."]
+unique_name_in_owner = true
+motion_mirroring = Vector2(256, 256)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
+modulate = Color(1, 1, 1, 0.501961)
+texture_repeat = 2
+position = Vector2(128, 128)
+texture = ExtResource("2_6f5ne")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 256)

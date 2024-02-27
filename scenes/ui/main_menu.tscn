@@ -1,7 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://jer0xh2pay0i"]
-
-[ext_resource type="Script" path="res://scenes/ui/Background.gd" id="1_c6baw"]
-[ext_resource type="Texture2D" uid="uid://bu7c2748rpsn7" path="res://assets/stary_background.png" id="1_xvolc"]
+[gd_scene format=3 uid="uid://jer0xh2pay0i"]
 
 [node name="MainMenu" type="CanvasLayer"]
 
@@ -31,17 +28,3 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 10
 text = "SPACE PIrate survival"
 horizontal_alignment = 1
-
-[node name="Background" type="ParallaxBackground" parent="."]
-script = ExtResource("1_c6baw")
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
-motion_mirroring = Vector2(256, 256)
-
-[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer"]
-modulate = Color(1, 1, 1, 0.501961)
-texture_repeat = 2
-position = Vector2(128, 128)
-texture = ExtResource("1_xvolc")
-region_enabled = true
-region_rect = Rect2(0, 0, 256, 256)
