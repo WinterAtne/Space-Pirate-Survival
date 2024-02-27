@@ -15,5 +15,5 @@ func _on_timer_timeout():
 		randf_range(-1, 1))
 	
 	ship.position = ship.position.direction_to(Vector2.ZERO) * offset_from_center
-	
+	ship._choose_target(player.position)
 	
