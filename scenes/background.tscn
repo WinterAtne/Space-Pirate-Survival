@@ -8,10 +8,12 @@ script = ExtResource("1_6p2mj")
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="."]
 unique_name_in_owner = true
+show_behind_parent = true
 motion_mirroring = Vector2(256, 256)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
 modulate = Color(1, 1, 1, 0.501961)
+show_behind_parent = true
 texture_repeat = 2
 position = Vector2(128, 128)
 texture = ExtResource("2_6f5ne")

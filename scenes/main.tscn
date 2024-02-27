@@ -1,11 +1,30 @@
-[gd_scene load_steps=4 format=3 uid="uid://coer8fit0pos3"]
+[gd_scene load_steps=9 format=3 uid="uid://coer8fit0pos3"]
 
 [ext_resource type="PackedScene" uid="uid://jer0xh2pay0i" path="res://scenes/ui/main_menu.tscn" id="1_gqstx"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_il5e1"]
+[ext_resource type="PackedScene" uid="uid://ce1fhy5kjimtn" path="res://scenes/levels/level.tscn" id="2_e6a44"]
 [ext_resource type="PackedScene" uid="uid://bplfgyksvl84s" path="res://scenes/background.tscn" id="3_ds0d2"]
+[ext_resource type="Script" path="res://scenes/spawner.gd" id="3_vwvr6"]
+[ext_resource type="PackedScene" uid="uid://c2luwm5bufp88" path="res://scenes/star.tscn" id="4_0d6a1"]
+[ext_resource type="PackedScene" uid="uid://cbpsk81alsgdf" path="res://scenes/spawner.tscn" id="5_xufx0"]
+
+[sub_resource type="PackedScene" id="PackedScene_cwmxt"]
+_bundled = {
+"base_scene": 0,
+"conn_count": 0,
+"conns": PackedInt32Array(),
+"editable_instances": [],
+"names": PackedStringArray("BlueGiant", "script", "ship", "spawn_distance_offset", "min_wait_time", "wait_time_step", "Camera", "Player", "position", "Star", "Spawner", "player"),
+"node_count": 4,
+"node_paths": [],
+"nodes": PackedInt32Array(-1, -1, 2147483647, 0, -1, 5, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 0, 0, 0, 2147483647, 524295, -1, 1, 8, 6, 0, 0, 0, 2147483647, 786441, 7, 0, 0, 0, 0, 2147483647, 1048586, 8, 1, 1073741835, 9, 0),
+"variants": [ExtResource("2_e6a44"), ExtResource("3_vwvr6"), null, 50.0, 1.2, 0.1, Vector2(64, 64), ExtResource("4_0d6a1"), ExtResource("5_xufx0"), NodePath("../Player")],
+"version": 3
+}
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_il5e1")
+level = SubResource("PackedScene_cwmxt")
 
 [node name="MainMenu" parent="." instance=ExtResource("1_gqstx")]
 unique_name_in_owner = true
