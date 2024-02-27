@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://cr7jp1ykk0e7o"]
+[gd_scene format=3 uid="uid://b88ekci6n5oao"]
 
-[node name="DeathScreen" type="CanvasLayer"]
+[node name="LevelSelect" type="CanvasLayer"]
 
 [node name="CenterContainer" type="CenterContainer" parent="."]
 anchors_preset = 15
@@ -14,18 +14,6 @@ layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
 
-[node name="TryAgain" type="Button" parent="CenterContainer/Buttons"]
-layout_mode = 2
-text = "Try Again"
-
-[node name="Next" type="Button" parent="CenterContainer/Buttons"]
-layout_mode = 2
-text = "Next System"
-
-[node name="LevelSelect" type="Button" parent="CenterContainer/Buttons"]
-layout_mode = 2
-text = "Level Select"
-
 [node name="MainMenu" type="Button" parent="CenterContainer/Buttons"]
 layout_mode = 2
 text = "Main Menu"
@@ -38,14 +26,14 @@ grow_horizontal = 2
 [node name="VBoxContainer" type="VBoxContainer" parent="Titlecard"]
 layout_mode = 2
 
-[node name="Death" type="Label" parent="Titlecard/VBoxContainer"]
+[node name="Systems" type="Label" parent="Titlecard/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
-text = "Your Ship was Hit..."
+text = "A Lot of Systems"
 horizontal_alignment = 1
 
-[node name="LiveOn" type="Label" parent="Titlecard/VBoxContainer"]
+[node name="ToChooseFrom" type="Label" parent="Titlecard/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 10
-text = "But You Live on!"
+text = "Let's Rob them Blind"
 horizontal_alignment = 1

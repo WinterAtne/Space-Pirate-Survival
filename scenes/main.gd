@@ -12,12 +12,13 @@ func start_level() -> void:
 	
 	current_level = levels[current_level_index].instantiate()
 	add_child(current_level)
-	current_level.level_ended.connect(end_level.bind())
+	current_level.level_ended.connect(go_to_death_screen.bind())
 	
 
-func end_level() -> void:
+func go_to_death_screen() -> void:
 	%MainMenu.visible = false
 	%DeathScreen.visible = true
+	%LevelSelect.visible = false
 	%Background.set_process(true)
 	
 	if current_level:
@@ -25,9 +26,18 @@ func end_level() -> void:
 		
 	
 
-func _on_start_button_down() -> void:
-	current_level_index = 0
-	start_level()
+func go_to_main_menu() -> void:
+	%MainMenu.visible = true
+	%DeathScreen.visible = false
+	%LevelSelect.visible = false
+	%Background.set_process(true)
+	
+
+func go_to_level_select() -> void:
+	%MainMenu.visible = false
+	%DeathScreen.visible = false
+	%LevelSelect.visible = true
+	%Background.set_process(true)
 	
 
 func restart_level() -> void:

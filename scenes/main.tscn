@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://coer8fit0pos3"]
+[gd_scene load_steps=8 format=3 uid="uid://coer8fit0pos3"]
 
 [ext_resource type="PackedScene" uid="uid://jer0xh2pay0i" path="res://scenes/ui/main_menu.tscn" id="1_gqstx"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_il5e1"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bplfgyksvl84s" path="res://scenes/background.tscn" id="3_ds0d2"]
 [ext_resource type="PackedScene" uid="uid://cxgkaup60ssxh" path="res://scenes/levels/red_giant.tscn" id="3_wmbnr"]
 [ext_resource type="PackedScene" uid="uid://cr7jp1ykk0e7o" path="res://scenes/ui/death_screen.tscn" id="5_ba5vf"]
+[ext_resource type="PackedScene" uid="uid://b88ekci6n5oao" path="res://scenes/ui/level_select.tscn" id="6_pburi"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_il5e1")
@@ -18,12 +19,22 @@ unique_name_in_owner = true
 unique_name_in_owner = true
 visible = false
 
+[node name="LevelSelect" parent="." instance=ExtResource("6_pburi")]
+unique_name_in_owner = true
+visible = false
+
 [node name="Background" parent="." instance=ExtResource("3_ds0d2")]
 unique_name_in_owner = true
 scroll_offset = Vector2(23.0306, 458.673)
 
-[connection signal="button_down" from="MainMenu/CenterContainer/Buttons/Start" to="." method="_on_start_button_down"]
-[connection signal="button_down" from="DeathScreen/CenterContainer/Buttons/Start" to="." method="restart_level"]
+[connection signal="button_down" from="MainMenu/CenterContainer/Buttons/Start" to="." method="start_level"]
+[connection signal="button_down" from="MainMenu/CenterContainer/Buttons/LevelSelect" to="." method="go_to_level_select"]
+[connection signal="button_down" from="DeathScreen/CenterContainer/Buttons/TryAgain" to="." method="restart_level"]
+[connection signal="button_down" from="DeathScreen/CenterContainer/Buttons/Next" to="." method="start_next_level"]
+[connection signal="button_down" from="DeathScreen/CenterContainer/Buttons/LevelSelect" to="." method="go_to_level_select"]
+[connection signal="button_down" from="DeathScreen/CenterContainer/Buttons/MainMenu" to="." method="go_to_main_menu"]
+[connection signal="button_down" from="LevelSelect/CenterContainer/Buttons/MainMenu" to="." method="go_to_main_menu"]
 
 [editable path="MainMenu"]
 [editable path="DeathScreen"]
+[editable path="LevelSelect"]
