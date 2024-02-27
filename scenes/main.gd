@@ -1,20 +1,23 @@
 extends Node2D
 
-@export var level : PackedScene
+@export var levels : Array[PackedScene] = []
 
+var current_level_index : int
 var current_level : Level
 
 func _on_start_button_down():
 	%MainMenu.visible = false
 	%Background.set_process(false)
 	
-	load_level(level)
+	
+	current_level_index = 0
+	load_level(levels[current_level_index])
 	
 
 #this seemingly useless function is here in case we add more than one level
 #or a death screen or something
 func restart_level() -> void:
-	load_level(level)
+	load_level(levels[current_level_index])
 	
 
 func load_level(new_level : PackedScene) -> void:
