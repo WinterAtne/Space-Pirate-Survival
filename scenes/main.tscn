@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://coer8fit0pos3"]
+[gd_scene load_steps=7 format=3 uid="uid://coer8fit0pos3"]
 
 [ext_resource type="PackedScene" uid="uid://jer0xh2pay0i" path="res://scenes/ui/main_menu.tscn" id="1_gqstx"]
 [ext_resource type="Script" path="res://scenes/main.gd" id="1_il5e1"]
 [ext_resource type="PackedScene" uid="uid://clbxsx0eefxuj" path="res://scenes/levels/blue_giant.tscn" id="2_nxx7f"]
 [ext_resource type="PackedScene" uid="uid://bplfgyksvl84s" path="res://scenes/background.tscn" id="3_ds0d2"]
 [ext_resource type="PackedScene" uid="uid://cxgkaup60ssxh" path="res://scenes/levels/red_giant.tscn" id="3_wmbnr"]
+[ext_resource type="PackedScene" uid="uid://cr7jp1ykk0e7o" path="res://scenes/ui/death_screen.tscn" id="5_ba5vf"]
 
 [node name="Main" type="Node2D"]
 script = ExtResource("1_il5e1")
@@ -13,10 +14,16 @@ levels = Array[PackedScene]([ExtResource("2_nxx7f"), ExtResource("3_wmbnr")])
 [node name="MainMenu" parent="." instance=ExtResource("1_gqstx")]
 unique_name_in_owner = true
 
+[node name="DeathScreen" parent="." instance=ExtResource("5_ba5vf")]
+unique_name_in_owner = true
+visible = false
+
 [node name="Background" parent="." instance=ExtResource("3_ds0d2")]
 unique_name_in_owner = true
 scroll_offset = Vector2(23.0306, 458.673)
 
 [connection signal="button_down" from="MainMenu/CenterContainer/Buttons/Start" to="." method="_on_start_button_down"]
+[connection signal="button_down" from="DeathScreen/CenterContainer/Buttons/Start" to="." method="restart_level"]
 
 [editable path="MainMenu"]
+[editable path="DeathScreen"]

@@ -2,32 +2,44 @@ extends Node2D
 
 @export var levels : Array[PackedScene] = []
 
-var current_level_index : int
+var current_level_index : int = 0
 var current_level : Level
 
-func _on_start_button_down():
+func start_level() -> void:
 	%MainMenu.visible = false
+	%DeathScreen.visible = false
 	%Background.set_process(false)
 	
-	
-	current_level_index = 0
-	load_level(levels[current_level_index])
-	
-
-#this seemingly useless function is here in case we add more than one level
-#or a death screen or something
-func restart_level() -> void:
-	load_level(levels[current_level_index])
+	current_level = levels[current_level_index].instantiate()
+	add_child(current_level)
+	current_level.level_ended.connect(end_level.bind())
 	
 
-func load_level(new_level : PackedScene) -> void:
+func end_level() -> void:
+	%MainMenu.visible = false
+	%DeathScreen.visible = true
+	%Background.set_process(true)
+	
 	if current_level:
 		current_level.queue_free()
-		#the level is pretty big so we should wait a hot sec while it gets deleted
-		await get_tree().process_frame
 		
 	
-	current_level = new_level.instantiate()
-	add_child(current_level)
-	current_level.level_ended.connect(restart_level.bind())
+
+func _on_start_button_down() -> void:
+	current_level_index = 0
+	start_level()
+	
+
+func restart_level() -> void:
+	start_level()
+	
+
+func start_next_level() -> void:
+	current_level_index += 1
+	start_level()
+	
+
+func select_and_start_level(index : int) -> void:
+	current_level_index = index
+	start_level()
 	

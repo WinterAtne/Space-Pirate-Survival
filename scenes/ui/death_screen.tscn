@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cr7jp1ykk0e7o"]
+
+[node name="DeathScreen" type="CanvasLayer"]
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Buttons" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Start" type="Button" parent="CenterContainer/Buttons"]
+layout_mode = 2
+text = "Try Again"
+
+[node name="Next" type="Button" parent="CenterContainer/Buttons"]
+layout_mode = 2
+text = "Next System"
+
+[node name="LevelSelect" type="Button" parent="CenterContainer/Buttons"]
+layout_mode = 2
+text = "Return to Level Select"
+
+[node name="Titlecard" type="CenterContainer" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Titlecard"]
+layout_mode = 2
+
+[node name="Death" type="Label" parent="Titlecard/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "Your Ship was Hit..."
+horizontal_alignment = 1
+
+[node name="LiveOn" type="Label" parent="Titlecard/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 10
+text = "But You Live on!"
+horizontal_alignment = 1
