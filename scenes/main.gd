@@ -10,6 +10,7 @@ func start_level() -> void:
 	
 	%MainMenu.visible = false
 	%DeathScreen.visible = false
+	%LevelSelect.visible = false
 	%Background.set_process(false)
 	
 	current_level = LevelLists.levels[current_level_index].scene.instantiate()

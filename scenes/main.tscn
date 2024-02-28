@@ -30,7 +30,7 @@ scroll_offset = Vector2(23.0306, 458.673)
 [connection signal="button_down" from="DeathScreen/CenterContainer/Buttons/Next" to="." method="start_next_level"]
 [connection signal="button_down" from="DeathScreen/CenterContainer/Buttons/LevelSelect" to="." method="go_to_level_select"]
 [connection signal="button_down" from="DeathScreen/CenterContainer/Buttons/MainMenu" to="." method="go_to_main_menu"]
-[connection signal="button_down" from="LevelSelect/CenterContainer/Buttons/MainMenu" to="." method="go_to_main_menu"]
+[connection signal="level_selected" from="LevelSelect" to="." method="select_and_start_level"]
 
 [editable path="MainMenu"]
 [editable path="DeathScreen"]
