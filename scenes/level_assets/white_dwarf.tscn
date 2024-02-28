@@ -1,16 +1,26 @@
-[gd_scene load_steps=3 format=3 uid="uid://do1motegdb3pt"]
+[gd_scene load_steps=5 format=3 uid="uid://do1motegdb3pt"]
 
-[ext_resource type="PackedScene" uid="uid://c2luwm5bufp88" path="res://scenes/level_assets/star.tscn" id="1_ksmam"]
+[ext_resource type="PackedScene" uid="uid://bvuiqs22t8vbo" path="res://scenes/gravity_object.tscn" id="2_1bg18"]
 [ext_resource type="Texture2D" uid="uid://bsf3srpavqki8" path="res://assets/sprites/white_dwarf.png" id="2_3tkou"]
+[ext_resource type="PackedScene" uid="uid://cgkbeytfggb7p" path="res://scenes/hurtbox.tscn" id="3_0077t"]
 
-[node name="WhiteDwarf" instance=ExtResource("1_ksmam")]
+[sub_resource type="CircleShape2D" id="CircleShape2D_m3wbc"]
+radius = 4.12311
+
+[node name="WhiteDwarf" type="RigidBody2D"]
+collision_layer = 0
+collision_mask = 0
 mass = 5000.0
 
-[node name="Sprite" parent="." index="0"]
+[node name="Sprite" type="Sprite2D" parent="."]
 texture = ExtResource("2_3tkou")
 
-[node name="CollisionShape2D" parent="." index="1"]
-visible = false
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_m3wbc")
 
-[node name="CollisionShape2D" parent="Hurtbox" index="0"]
-visible = false
+[node name="GravityObject" parent="." instance=ExtResource("2_1bg18")]
+
+[node name="Hurtbox" parent="." instance=ExtResource("3_0077t")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+shape = SubResource("CircleShape2D_m3wbc")

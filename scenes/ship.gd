@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-@export var speed : float = 6000
+@export var speed : float = 2000
 
 func _choose_target(player_position : Vector2) -> void:
 	var force_direction : Vector2 = position.direction_to(-player_position)
