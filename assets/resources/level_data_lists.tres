@@ -1,9 +1,8 @@
-[gd_resource type="Resource" script_class="Level_Data_Lists" load_steps=4 format=3 uid="uid://cbjxw2gle5vhu"]
+[gd_resource type="Resource" script_class="Level_Data_Lists" load_steps=3 format=3 uid="uid://cbjxw2gle5vhu"]
 
 [ext_resource type="Resource" uid="uid://gy3rjuwt2ys4" path="res://scenes/levels/blue_giant.tres" id="1_p0g85"]
 [ext_resource type="Script" path="res://assets/resources/level_data_lists.gd" id="1_r3awd"]
-[ext_resource type="Resource" uid="uid://4dtj7k83pbvy" path="res://scenes/levels/white_dwarf.tres" id="2_mu1gy"]
 
 [resource]
 script = ExtResource("1_r3awd")
-levels = Array[Resource("res://assets/resources/level_data.gd")]([ExtResource("1_p0g85"), ExtResource("2_mu1gy")])
+levels = Array[Resource("res://assets/resources/level_data.gd")]([ExtResource("1_p0g85")])
