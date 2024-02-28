@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c530cjfafculj"
-path="res://.godot/imported/blue_star.png-87b48f636a82168d22df403def3ab592.ctex"
+uid="uid://byqr2iitrsnxy"
+path="res://.godot/imported/torpedo.png-c03b213a594a4cb75908cbcfce205dd1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/blue_star.png"
-dest_files=["res://.godot/imported/blue_star.png-87b48f636a82168d22df403def3ab592.ctex"]
+source_file="res://assets/sprites/torpedo.png"
+dest_files=["res://.godot/imported/torpedo.png-c03b213a594a4cb75908cbcfce205dd1.ctex"]
 
 [params]
 

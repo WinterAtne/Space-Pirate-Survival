@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://c2luwm5bufp88"]
 
-[ext_resource type="Texture2D" uid="uid://c530cjfafculj" path="res://assets/blue_star.png" id="1_ft7q1"]
-[ext_resource type="PackedScene" uid="uid://bvuiqs22t8vbo" path="res://scenes/gravity_object.tscn" id="2_5sgpc"]
-[ext_resource type="PackedScene" uid="uid://cgkbeytfggb7p" path="res://scenes/hurtbox.tscn" id="3_ysxlc"]
+[ext_resource type="Texture2D" uid="uid://c530cjfafculj" path="res://assets/sprites/blue_star.png" id="1_s7uh7"]
+[ext_resource type="PackedScene" uid="uid://bvuiqs22t8vbo" path="res://scenes/gravity_object.tscn" id="2_xyiiv"]
+[ext_resource type="PackedScene" uid="uid://cgkbeytfggb7p" path="res://scenes/hurtbox.tscn" id="3_38kt0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_m3wbc"]
 radius = 8.0
@@ -13,14 +13,14 @@ collision_mask = 0
 mass = 10000.0
 
 [node name="Sprite" type="Sprite2D" parent="."]
-texture = ExtResource("1_ft7q1")
+texture = ExtResource("1_s7uh7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_m3wbc")
 
-[node name="GravityObject" parent="." instance=ExtResource("2_5sgpc")]
+[node name="GravityObject" parent="." instance=ExtResource("2_xyiiv")]
 
-[node name="Hurtbox" parent="." instance=ExtResource("3_ysxlc")]
+[node name="Hurtbox" parent="." instance=ExtResource("3_38kt0")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
 shape = SubResource("CircleShape2D_m3wbc")

@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://do1motegdb3pt"]
+
+[ext_resource type="PackedScene" uid="uid://c2luwm5bufp88" path="res://scenes/level_assets/star.tscn" id="1_ksmam"]
+[ext_resource type="Texture2D" uid="uid://bsf3srpavqki8" path="res://assets/sprites/white_dwarf.png" id="2_3tkou"]
+
+[node name="WhiteDwarf" instance=ExtResource("1_ksmam")]
+mass = 5000.0
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource("2_3tkou")
+
+[node name="CollisionShape2D" parent="." index="1"]
+visible = false
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+visible = false

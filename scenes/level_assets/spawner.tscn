@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cbpsk81alsgdf"]
 
-[ext_resource type="Script" path="res://scenes/spawner.gd" id="1_6lhkl"]
+[ext_resource type="Script" path="res://scenes/level_assets/spawner.gd" id="1_6lhkl"]
 [ext_resource type="PackedScene" uid="uid://j7vqb66401co" path="res://scenes/ship.tscn" id="2_kbdt0"]
 
 [node name="Spawner" type="Node"]

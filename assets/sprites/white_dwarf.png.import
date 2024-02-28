@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bew35rdqjt7po"
-path="res://.godot/imported/ship.png-0b2a8e7064d2d88a0149f9491a8ea676.ctex"
+uid="uid://bsf3srpavqki8"
+path="res://.godot/imported/white_dwarf.png-6dcf602566709e897058e65a83f6c208.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ship.png"
-dest_files=["res://.godot/imported/ship.png-0b2a8e7064d2d88a0149f9491a8ea676.ctex"]
+source_file="res://assets/sprites/white_dwarf.png"
+dest_files=["res://.godot/imported/white_dwarf.png-6dcf602566709e897058e65a83f6c208.ctex"]
 
 [params]
 

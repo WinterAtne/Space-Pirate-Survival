@@ -1,14 +1,14 @@
 [gd_scene load_steps=3 format=3 uid="uid://dvbn1hj6kdra"]
 
-[ext_resource type="Texture2D" uid="uid://c530cjfafculj" path="res://assets/blue_star.png" id="1_2ahgt"]
 [ext_resource type="Script" path="res://scenes/ui/level_select_template.gd" id="1_cstex"]
+[ext_resource type="Texture2D" uid="uid://c530cjfafculj" path="res://assets/sprites/blue_star.png" id="2_kkdb7"]
 
 [node name="LevelSelectTemplate" type="HBoxContainer"]
 script = ExtResource("1_cstex")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 2
-texture = ExtResource("1_2ahgt")
+texture = ExtResource("2_kkdb7")
 
 [node name="Button" type="Button" parent="."]
 layout_mode = 2

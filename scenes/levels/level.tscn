@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://scenes/levels/level.gd" id="1_ga50h"]
 [ext_resource type="PackedScene" uid="uid://cq3dypgj7lmc3" path="res://scenes/player.tscn" id="1_hji6n"]
-[ext_resource type="PackedScene" uid="uid://cktmaajhi3dpl" path="res://scenes/bounds.tscn" id="3_grbri"]
+[ext_resource type="PackedScene" uid="uid://cktmaajhi3dpl" path="res://scenes/level_assets/bounds.tscn" id="3_ubmre"]
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_ga50h")
@@ -12,4 +12,4 @@ script = ExtResource("1_ga50h")
 [node name="Player" parent="." instance=ExtResource("1_hji6n")]
 unique_name_in_owner = true
 
-[node name="Bounds" parent="." instance=ExtResource("3_grbri")]
+[node name="Bounds" parent="." instance=ExtResource("3_ubmre")]

@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_cugs0"]
 [ext_resource type="PackedScene" uid="uid://bvuiqs22t8vbo" path="res://scenes/gravity_object.tscn" id="1_padlu"]
 [ext_resource type="PackedScene" uid="uid://pc4t7461wbx8" path="res://scenes/torpedo.tscn" id="2_7maqe"]
-[ext_resource type="Texture2D" uid="uid://c8wnsxmuynco4" path="res://assets/player_ship.png" id="2_bxrph"]
+[ext_resource type="Texture2D" uid="uid://c8wnsxmuynco4" path="res://assets/sprites/player_ship.png" id="2_bxrph"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2fau"]
 size = Vector2(6, 6)
