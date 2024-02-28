@@ -1,7 +1,6 @@
 extends RigidBody2D
 
 const acceleration : float = 5.0
-const torpedo_speed : float = 10000
 
 @export var torpedo : PackedScene
 
@@ -25,7 +24,7 @@ func fire_torpedo(facing : Vector2) -> void:
 	get_parent().add_child(instanced_torpedo)
 	instanced_torpedo.position = facing * 10 + global_position;
 	
-	instanced_torpedo.apply_central_force(facing * torpedo_speed)
+	instanced_torpedo._go_towards(facing)
 	
 
 func damage() -> void:
