@@ -33,6 +33,7 @@ func go_to_main_menu() -> void:
 	%MainMenu.visible = true
 	%DeathScreen.visible = false
 	%LevelSelect.visible = false
+	%Credits.visible = false
 	%Background.set_process(true)
 	
 
@@ -41,6 +42,15 @@ func go_to_level_select() -> void:
 	%DeathScreen.visible = false
 	%LevelSelect.visible = true
 	%Background.set_process(true)
+	
+
+func go_to_credits() -> void:
+	%MainMenu.visible = false
+	%DeathScreen.visible = false
+	%LevelSelect.visible = false
+	%Credits.visible = true
+	%Background.set_process(false)
+	
 	
 
 func restart_level() -> void:
