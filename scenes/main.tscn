@@ -22,7 +22,7 @@ visible = false
 
 [node name="Background" parent="." instance=ExtResource("3_ds0d2")]
 unique_name_in_owner = true
-scroll_offset = Vector2(23.0306, 458.673)
+rate = 0.25
 
 [connection signal="button_down" from="MainMenu/CenterContainer/Buttons/Start" to="." method="start_level"]
 [connection signal="button_down" from="MainMenu/CenterContainer/Buttons/LevelSelect" to="." method="go_to_level_select"]
