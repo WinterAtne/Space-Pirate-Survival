@@ -10,6 +10,7 @@
 radius = 4.12311
 
 [node name="Ship" type="RigidBody2D"]
+lock_rotation = true
 script = ExtResource("1_2oboe")
 drop = ExtResource("2_j0a0d")
 
