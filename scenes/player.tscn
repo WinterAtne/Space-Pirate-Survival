@@ -19,3 +19,5 @@ texture = ExtResource("2_bxrph")
 shape = SubResource("RectangleShape2D_k2fau")
 
 [node name="GravityObject" parent="." instance=ExtResource("1_padlu")]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

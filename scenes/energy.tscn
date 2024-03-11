@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://5tdvkgj8qdlv"]
+
+[ext_resource type="Script" path="res://scenes/energy.gd" id="1_504pb"]
+[ext_resource type="Texture2D" uid="uid://ds1s41wt7aao1" path="res://assets/sprites/energy.png" id="1_p56kk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iutj6"]
+radius = 4.47214
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xtpup"]
+radius = 9.05539
+
+[node name="Energy" type="RigidBody2D"]
+lock_rotation = true
+script = ExtResource("1_504pb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_p56kk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_iutj6")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_xtpup")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
