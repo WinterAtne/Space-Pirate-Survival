@@ -2,6 +2,10 @@ extends RigidBody2D
 class_name Player
 
 const acceleration : float = 5.0
+const torpedo_cost : float = -1.0
+const acceleration_cost : float = -0.005
+
+@onready var energy_label : Label = %HUD/Energy
 
 @export var torpedo : PackedScene
 
@@ -10,13 +14,23 @@ const acceleration : float = 5.0
 
 signal player_died
 
+func _ready():
+	#This prevents a bug where the player shoots the moment they start the level
+	#Due to technically still clicking the start button when the level starts
+	set_physics_process(false)
+	for n in 4:
+		await get_tree().physics_frame
+		
+	set_physics_process(true)
+	
+
 func _physics_process(delta) -> void:
 	var mouse_position : Vector2 = get_viewport().get_mouse_position()
 	mouse_position = mouse_position - ((get_viewport().get_visible_rect().size / 2))
 	var facing : Vector2 = position.direction_to(mouse_position)
 	
 	if Input.is_action_pressed("accelerate"):
-		give_energy(-0.01)
+		give_energy(acceleration_cost)
 		apply_central_force(facing * acceleration)
 		
 	
@@ -25,7 +39,7 @@ func _physics_process(delta) -> void:
 	
 
 func fire_torpedo(facing : Vector2) -> void:
-	give_energy(-1)
+	give_energy(torpedo_cost)
 	var instanced_torpedo = torpedo.instantiate()
 	get_parent().add_child(instanced_torpedo)
 	instanced_torpedo.position = facing * 10 + global_position;
@@ -38,7 +52,7 @@ func damage() -> void:
 	queue_free()
 	
 
-func give_energy(amount : int) -> void:
+func give_energy(amount : float) -> void:
 	current_energy += amount
 	if 0 >= current_energy:
 		damage()
@@ -47,7 +61,7 @@ func give_energy(amount : int) -> void:
 		current_energy = max_energy
 		
 	
-	print(current_energy)
+	energy_label.text = "%0.2f" %current_energy
 	
 
 

@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://cq3dypgj7lmc3"]
+[gd_scene load_steps=7 format=3 uid="uid://cq3dypgj7lmc3"]
 
 [ext_resource type="Script" path="res://scenes/player.gd" id="1_cugs0"]
 [ext_resource type="PackedScene" uid="uid://bvuiqs22t8vbo" path="res://scenes/gravity_object.tscn" id="1_padlu"]
 [ext_resource type="PackedScene" uid="uid://pc4t7461wbx8" path="res://scenes/torpedo.tscn" id="2_7maqe"]
 [ext_resource type="Texture2D" uid="uid://c8wnsxmuynco4" path="res://assets/sprites/player_ship.png" id="2_bxrph"]
+[ext_resource type="PackedScene" uid="uid://dbcwoq8enie3d" path="res://scenes/ui/hud.tscn" id="5_skbfi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k2fau"]
 size = Vector2(6, 6)
@@ -20,4 +21,9 @@ shape = SubResource("RectangleShape2D_k2fau")
 
 [node name="GravityObject" parent="." instance=ExtResource("1_padlu")]
 
+[node name="HUD" parent="." instance=ExtResource("5_skbfi")]
+unique_name_in_owner = true
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+
+[editable path="HUD"]
