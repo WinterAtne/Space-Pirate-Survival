@@ -30,6 +30,7 @@ unique_name_in_owner = true
 rate = 0.25
 
 [connection signal="button_down" from="MainMenu/CenterContainer/Buttons/Start" to="." method="start_level"]
+[connection signal="button_down" from="MainMenu/CenterContainer/Buttons/LevelSelect" to="." method="go_to_level_select"]
 [connection signal="button_down" from="MainMenu/CenterContainer/Buttons/Credits" to="." method="go_to_credits"]
 [connection signal="button_down" from="DeathScreen/CenterContainer/Buttons/TryAgain" to="." method="restart_level"]
 [connection signal="button_down" from="DeathScreen/CenterContainer/Buttons/MainMenu" to="." method="go_to_main_menu"]
