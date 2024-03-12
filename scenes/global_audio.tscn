@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxm8wbbkd0ajc"]
+[gd_scene load_steps=7 format=3 uid="uid://bxm8wbbkd0ajc"]
 
 [ext_resource type="AudioStream" uid="uid://bv1y0q4ehppmg" path="res://assets/audio/player_death.wav" id="1_6443f"]
 [ext_resource type="Script" path="res://scenes/global_audio.gd" id="1_cqv0s"]
 [ext_resource type="AudioStream" uid="uid://c1wyomjsy6cuk" path="res://assets/audio/fire_torpedo.wav" id="3_r1dbm"]
 [ext_resource type="AudioStream" uid="uid://dvmg5fvhk4vqg" path="res://assets/audio/kill_enemy.wav" id="4_0lm4f"]
 [ext_resource type="AudioStream" uid="uid://dapt06w5f7b4t" path="res://assets/audio/collect_energy.wav" id="5_8auqw"]
+[ext_resource type="AudioStream" uid="uid://cb06uxvsa3ptj" path="res://assets/audio/control_locked.wav" id="6_bd5ko"]
 
 [node name="GlobalAudio" type="Node"]
 script = ExtResource("1_cqv0s")
@@ -23,3 +24,6 @@ bus = &"Death"
 [node name="CollectEnergy" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_8auqw")
 bus = &"Death"
+
+[node name="ControlLocked" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_bd5ko")

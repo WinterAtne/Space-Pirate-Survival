@@ -73,6 +73,7 @@ func give_energy(amount : float) -> void:
 		
 	
 	if current_energy <= 0 and not control_locked_hud.visible:
+		GlobalAudio.audio_players[4].play() #control_locked
 		control_locked_hud.visible = true
 		current_energy = 0
 		
