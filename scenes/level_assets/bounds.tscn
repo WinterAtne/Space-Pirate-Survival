@@ -8,7 +8,7 @@
 script = ExtResource("1_yadl4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-scale = Vector2(15, 15)
+scale = Vector2(13.5, 13.5)
 shape = SubResource("RectangleShape2D_ois1g")
 
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
