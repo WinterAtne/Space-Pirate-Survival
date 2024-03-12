@@ -40,6 +40,7 @@ func _physics_process(delta) -> void:
 
 func fire_torpedo(facing : Vector2) -> void:
 	give_energy(torpedo_cost)
+	GlobalAudio.audio_players[1].play() #fire_torpedo
 	var instanced_torpedo = torpedo.instantiate()
 	get_parent().add_child(instanced_torpedo)
 	instanced_torpedo.position = facing * 10 + global_position;
@@ -49,7 +50,12 @@ func fire_torpedo(facing : Vector2) -> void:
 
 func damage() -> void:
 	player_died.emit()
+	GlobalAudio.audio_players[0].play() #player_death
 	queue_free()
+	
+
+func _exit_tree():
+	damage()
 	
 
 func give_energy(amount : float) -> void:

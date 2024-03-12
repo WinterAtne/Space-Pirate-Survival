@@ -18,6 +18,7 @@ config/features=PackedStringArray("4.2", "GL Compatibility")
 
 Gravity="*res://autoloads/gravity.gd"
 LevelLists="*res://autoloads/level_lists.gd"
+GlobalAudio="*res://scenes/global_audio.tscn"
 
 [display]
 
