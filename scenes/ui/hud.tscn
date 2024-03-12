@@ -1,9 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://dbcwoq8enie3d"]
-
-[ext_resource type="Texture2D" uid="uid://cnfr0ueikbufs" path="res://assets/sprites/black_box.png" id="1_jhi28"]
-
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n0bct"]
-texture = ExtResource("1_jhi28")
+[gd_scene format=3 uid="uid://dbcwoq8enie3d"]
 
 [node name="HUD" type="CanvasLayer"]
 
@@ -20,14 +15,6 @@ grow_vertical = 0
 text = "10.00"
 horizontal_alignment = 2
 
-[node name="Panel" type="Panel" parent="Energy"]
-show_behind_parent = true
-layout_mode = 0
-offset_left = 9.0
-offset_right = 40.0
-offset_bottom = 7.0
-theme_override_styles/panel = SubResource("StyleBoxTexture_n0bct")
-
 [node name="ConrolLocked" type="Label" parent="."]
 visible = false
 anchors_preset = 3
@@ -43,12 +30,3 @@ grow_vertical = 0
 theme_override_colors/font_color = Color(0.729412, 0, 0, 1)
 text = "CONTROL LOCKED"
 horizontal_alignment = 2
-
-[node name="Panel" type="Panel" parent="ConrolLocked"]
-show_behind_parent = true
-layout_mode = 0
-offset_left = -1.0
-offset_right = 30.0
-offset_bottom = 7.0
-scale = Vector2(2.75088, 0.995238)
-theme_override_styles/panel = SubResource("StyleBoxTexture_n0bct")

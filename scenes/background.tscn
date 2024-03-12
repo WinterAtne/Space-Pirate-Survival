@@ -12,7 +12,6 @@ show_behind_parent = true
 motion_mirroring = Vector2(256, 256)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxLayer"]
-modulate = Color(1, 1, 1, 0.25098)
 show_behind_parent = true
 texture_repeat = 2
 position = Vector2(128, 128)
