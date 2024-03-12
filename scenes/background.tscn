@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bplfgyksvl84s"]
 
 [ext_resource type="Script" path="res://scenes/Background.gd" id="1_6p2mj"]
-[ext_resource type="Texture2D" uid="uid://bu7c2748rpsn7" path="res://assets/sprites/stary_background.png" id="2_67sik"]
+[ext_resource type="Texture2D" uid="uid://6r4ljyrkhvee" path="res://assets/sprites/start_background_large.png" id="2_pggkm"]
 
 [node name="Background" type="ParallaxBackground"]
 script = ExtResource("1_6p2mj")
@@ -15,6 +15,6 @@ motion_mirroring = Vector2(256, 256)
 show_behind_parent = true
 texture_repeat = 2
 position = Vector2(128, 128)
-texture = ExtResource("2_67sik")
+texture = ExtResource("2_pggkm")
 region_enabled = true
 region_rect = Rect2(0, 0, 256, 256)
