@@ -2,7 +2,7 @@ extends RigidBody2D
 class_name Player
 
 const acceleration : float = 5.0
-const torpedo_cost : float = -1.0
+const torpedo_cost : float = -0.5
 const acceleration_cost : float = -0.005
 
 @onready var energy_label : Label = %HUD/Energy
@@ -10,7 +10,7 @@ const acceleration_cost : float = -0.005
 @export var torpedo : PackedScene
 
 @export var max_energy : float = 10
-@onready var current_energy : float = max_energy
+@onready var current_energy : float
 
 signal player_died
 
@@ -22,6 +22,8 @@ func _ready():
 		await get_tree().physics_frame
 		
 	set_physics_process(true)
+	
+	current_energy = max_energy
 	
 
 func _physics_process(delta) -> void:
