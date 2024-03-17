@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c02igpg1ic5sc"]
+
+[ext_resource type="Script" path="res://autoloads/physics_node.gd" id="1_8xlpk"]
+
+[node name="PhysicsNode" type="Node2D"]
+script = ExtResource("1_8xlpk")

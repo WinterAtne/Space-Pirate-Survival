@@ -1,3 +1,20 @@
-[gd_scene format=3 uid="uid://coer8fit0pos3"]
+[gd_scene load_steps=4 format=3 uid="uid://coer8fit0pos3"]
+
+[ext_resource type="Texture2D" uid="uid://c530cjfafculj" path="res://assets/sprites/blue_star.png" id="1_1jgsv"]
+[ext_resource type="Script" path="res://autoloads/physics_node.gd" id="2_im5w1"]
+[ext_resource type="Texture2D" uid="uid://bew35rdqjt7po" path="res://assets/sprites/ship.png" id="3_7e5n0"]
 
 [node name="Main" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(128, 128)
+texture = ExtResource("1_1jgsv")
+script = ExtResource("2_im5w1")
+mass = 1000.0
+is_attractor = true
+is_orbiter = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(72, 77)
+texture = ExtResource("3_7e5n0")
+script = ExtResource("2_im5w1")

@@ -16,7 +16,7 @@ config/features=PackedStringArray("4.2", "GL Compatibility")
 
 [autoload]
 
-Gravity="*res://autoloads/gravity.gd"
+Fisics="*res://autoloads/global_physics.gd"
 
 [display]
 
